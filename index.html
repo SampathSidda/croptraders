@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            background-image: url('bc7.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding-top: 200px;
+        }
+        .login-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+            margin: 0 auto;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="button" onclick="validateLogin()">Login</button>
+        </form>
+        <p id="loginStatus"></p>
+    </div>
+    <script>
+        function validateLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            // Dummy validation (replace with actual validation logic)
+            if (username === "divya" && password === "divya123") {
+                document.getElementById("loginStatus").innerHTML = "Login successful!";
+                window.location.href = "https://karumojudivya.wixsite.com/croptraders"; 
+            } else {
+                document.getElementById("loginStatus").innerHTML = "Invalid username or password. Please try again.";
+            }
+        }
+    </script>
+</body>
+</html>
